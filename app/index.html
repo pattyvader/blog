@@ -7,25 +7,12 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Blog Home</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="../app/assets/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="../app/assets/css/blog-home.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/blog-home.css" rel="stylesheet">
 </head>
-<body>
-    <!-- Navigation -->
+<body ng-app="MyApp">
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -35,205 +22,214 @@
                 </button>
                 <a class="navbar-brand" href="#">Blog</a>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li><a href="#">Sobre</a></li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
     </nav>
-
-    <!-- Page Content -->
-    <div class="container">
+    <div class="container"  ng-controller="ExampleController">
         <div class="row">
-            <!-- Blog Entries Column -->
             <div class="col-md-8">
-                <h1 class="page-header">
-                    Revolução Feminina
-                    <h4>Liberdade, Igualdade e Fraternidade na TI</h4>
-                </h1>
-                <h2>
-                    <a href="#">A nova garagem da NASA parece algo de dentro da Estrela da Morte</a>
-                </h2>
-                <p class="lead">by <a href="http://gizmodo.uol.com.br/">Gizmodo</a></p>
-                <p><span class="glyphicon glyphicon-time"></span> Postado em 20 de abril de 2016</p>
-                <hr>
-                <p>Esta estrutura imensa de aço parece o interior da Estrela da Morte de Star Wars Episódio VI. Mas, na verdade, é uma parte do Vehicle Assembly Building (VAB), do Kennedy Space Center na Flórida, EUA.</p>
-                <a class="btn btn-primary" href="../app/post/posts/post01.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
-                <hr>
-                <h2>
-                    <a href="#">Relatório 2015 de Segurança do Android</a>
-                </h2>
-                <p class="lead">by <a href="http://googlebrasilblog.blogspot.com.br/">Google Brasil Blog</a></p>
-                <p><span class="glyphicon glyphicon-time"></span> Postado em 19 de abril de 2016</p>
-                <hr>
-                <p>Hoje, pelo segundo ano consecutivo, estamos liberando nosso relatório anual de Segurança do Android. O estudo incluí: um olhar detalhado sobre como os serviços do Google protegem o ecossistema do Android, uma revisão dos recursos de proteção lançados em 2015 e nosso amplo trabalho com os parceiros e com a comunidade de pesquisadores de segurança.</p>
-                <a class="btn btn-primary" href="../app/post/posts/post02.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
-                <hr>
-                <h2>
-                    <a href="#">Anatel suspende limites na banda larga fixa por 90 dias</a>
-                </h2>
-                <p class="lead">by <a href="https://tecnoblog.net/">TecnoBlog</a></p>
-                <p><span class="glyphicon glyphicon-time"></span> Postado em 18 de abril de 2016</p>
-                <hr>
-                <p>Operadoras precisam cumprir determinações da Anatel antes de aplicar sanções aos consumidores</p>
-                <a class="btn btn-primary" href="../app/post/posts/post03.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
-                <hr>
-                <h2>
-                    <a href="#">Encontre tempo para cumprir suas metas com o Google Agenda</a>
-                </h2>
-                <p class="lead">by <a href="http://googlebrasilblog.blogspot.com.br/">Google Brasil Blog</a></p>
-                <p><span class="glyphicon glyphicon-time"></span> Postado em 14 de abril de 2016</p>
-                <hr>
-                <p>Ler mais livros, aprender uma nova língua ou exercitar-se regularmente. Qualquer que seja sua meta, alcançá-la pode ser uma tarefa muito difícil. Um dia é “eu fui chamado para uma reunião de última hora”, no outro “eu tenho um amigo na cidade” e, antes que você perceba, suas metas estão atrasadas ou deixadas de lado.</p>
-                <a class="btn btn-primary" href="../app/post/posts/post04.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
-                <hr>
-                <h2>
-                    <a href="#">Tecnologia e gênero: distinção importa?</a>
-                </h2>
-                <p class="lead">by <a href="https://mulheresnacomputacao.com">Mulheres na computação</a>
-                </p>
-                <p><span class="glyphicon glyphicon-time"></span> Postado em 09 de Abril de 2016</p>
-                <hr>
-                <p>Não se pode mais negar: o empoderamento feminino, finalmente, é uma pauta que vem crescendo e sendo discutida nos mais diversos âmbitos da sociedade.</p>
-                <a class="btn btn-primary" href="../app/post/posts/post05.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
-                <hr>
-                <!-- Second Blog Post -->
-                <h2>
-                    <a href="#">Quer arrumar um emprego na área de tecnologia? Chegou sua hora!</a>
-                </h2>
-                <p class="lead">by <a href="https://mulheresnacomputacao.com">Mulheres na computação</a></p>
-                <p><span class="glyphicon glyphicon-time"></span> Postado em 06 de Abril de 2016</p>
-                <hr>
-                <p>A Landing.jobs, plataforma europeia de empregos de TI, está lançando um desafio para selecionar 12 especialistas em TI da América Latina para participar gratuitamente do Landing.jobs Festival, em junho, em Lisboa.</p>
-                <a class="btn btn-primary" href="../app/post/posts/post06.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
-                <hr>
-                <h2>
-                    <a href="#">Mulheres Maravilha – A história não contada das super-heroínas americanas</a>
-                </h2>
-                <p class="lead">by <a href="http://minasnerds.com.br/">Minas Nerds</a></p>
-                <p><span class="glyphicon glyphicon-time"></span> Postado em 06 de abril de 2016</p>
-                <hr>
-                <p>Aqui o documentário – Wonder Women – a história não contada das super-heroínas americanas (em inglês, sorry 🙁 que traça a evolução fascinante e o legado da nossa querida Mulher Maravilha, simbolo máximo do feminismo e do poder da mulher na cultura pop em geral.</p>
-                <a class="btn btn-primary" href="../app/post/posts/post07.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
-                <hr>
-                <h2>
-                    <a href="#">Pat Patriot: Mulher, operária e patriota</a>
-                </h2>
-                <p class="lead">by <a href="http://ladyscomics.com.br/">Ladys Comics</a></p>
-                <p><span class="glyphicon glyphicon-time"></span> Postado em 04 de abril de 2016</p>
-                <hr>
-                <p>Nos “Anos de Ouro” (The Golden Age) dos comics estadunidenses, centenas de personagens de Histórias em Quadrinhos (HQs) foram criadas e lançadas em jornais e revistas. As HQs estavam em uma fase de grande popularidade. Surgiram muitos estúdios especializados na sua produção para atender à demanda do público e das próprias editoras.</p>
-                <a class="btn btn-primary" href="../app/post/posts/post08.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
-                <hr>
-                <h2>
-                    <a href="#">Empoderar mulheres por meio da tecnologia?</a>
-                </h2>
-                <p class="lead">by <a href="http://mulheresnatecnologia.org/">Mulheres na Tecnologia</a></p>
-                <p><span class="glyphicon glyphicon-time"></span> Postado em 30 de março de 2016</p>
-                <hr>
-                <p>Muito tem se falado sobre a baixa presença de mulheres na tecnologia. O tema vem ganhando espaço em ambientes acadêmicos, na mídia e dentro da própria tecnologia. Estudos apontam que as razões para este fato são construídas a partir da infância, nos primeiros contatos com a educação formal e influências culturais machistas, e são reforçadas ao longo de toda vida. Além deste, um outro problema é o fato de muitas mulheres estarem abandonando a carreira de TI. O principal motivo é a difícil convivência com o machismo que impera neste ambiente.</p>
-                <a class="btn btn-primary" href="../app/post/posts/post09.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
-                <hr>
-                <h2>
-                    <a href="#">Colabore com o libre graphics!</a>
-                </h2>
-                <p class="lead">by <a href="http://mulheres.eti.br/">Mulheres, Tecnologia e Oportunidades</a></p>
-                <p><span class="glyphicon glyphicon-time"></span> Postado em 30 de março de 2016</p>
-                <hr>
-                <p>Em abril (15 a 18)  vai acontecer o Libre Graphics que é um evento para usuários, entusiastas e desenvolvedores de Software Livre para aplicações gŕaficas. Dentre os softwares mantidos por esse grupo estão: Open Clipart Library, Blender, Inkscape e GIMP.</p>
-                <a class="btn btn-primary" href="../app/post/posts/post10.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
-                <hr>
-                <h2>
-                    <a href="#">Hello, World!</a>
-                </h2>
-                <p class="lead">by <a href="http://projetotutoras.com/">Projeto Tutoras</a></p>
-                <p><span class="glyphicon glyphicon-time"></span> Postado em 29 de março de 2016</p>
-                <hr>
-                <p>Quando aprendemos uma linguagem de programação, geralmente nosso primeiro programa é algo bem simples cuja única função é mostrar a frase “Hello, World!” na tela.</p>
-                <a class="btn btn-primary" href="../app/post/posts/post11.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
-                <hr>
-                <h2>
-                    <a href="#">Estudo gigante revela gap gênero na tecnologia e mais vários outros insights!</a>
-                </h2>
-                <p class="lead">by <a href="https://mulheresnacomputacao.com">Mulheres na computação</a></p>
-                <p><span class="glyphicon glyphicon-time"></span> Postado em 21 de março de 2016</p>
-                <hr>
-                <p>Quem aqui é do mundo de tecnologia e não conhece o Stack Overflow?! Esta é uma plataforma gigante de perguntas e respostas relacionadas a tecnologia! Eles indagaram mais de 50 mil pessoas e criaram um mapa com o perfil dos profissionais que trabalham com desenvolvimento de sistemas. E pra variar um gap de gênero gigante foi escancarado!!</p>
-                <a class="btn btn-primary" href="../app/post/posts/post12.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
-                <hr>
-                <h2>
-                    <a href="#">Listagem colaborativa das iniciativas de mulheres na tecnologia pelo país <3</a>
-                </h2>
-                <p class="lead">by <a href="https://mulheresnacomputacao.com">Mulheres na computação</a></p>
-                <p><span class="glyphicon glyphicon-time"></span> Postado em 12 de março de 2016</p>
-                <hr>
-                <p>Sempre me perguntam: Mas será que tem algo do tipo na minha cidade? Onde eu acho as comunidades? Será que eu estou sozinha?
-                  ENFIM! Querendo um mundo melhor e como comemoração da semana da mulher fiz uma chamado nas nossas redes sociais para gente juntar tudo em um lugar só!</p>
-                <a class="btn btn-primary" href="../app/post/posts/post13.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
-                <hr>
-                <h2>
-                    <a href="#">Data Science: Por onde começar a estudar?[Parte 1]</a>
-                </h2>
-                <p class="lead">by <a href="http://inspiradanacomputacao.com/">Inspirada na Computação</a></p>
-                <p><span class="glyphicon glyphicon-time"></span> Postado em 08 de fevereiro de 2016</p>
-                <hr>
-                <p>Como estudar a base para os cursos oferecidos no Coursera/edX/etc</p>
-                <a class="btn btn-primary" href="../app/post/posts/post14.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
-                <hr>
-                <h2>
-                    <a href="#">As 10 heroínas mais feministas dos quadrinhos</a>
-                </h2>
-                <p class="lead">by <a href="http://minasnerds.com.br/">Minas Nerds</a></p>
-                <p><span class="glyphicon glyphicon-time"></span> Postado em 05 de novembro de 2015</p>
-                <p>Se você é menina padawan nessa coisa de ler quadrinhos e ainda acha que o gênero se resume a super-heróis, machistas e excludentes em sua grande maioria, com milhares de músculos ilustrados de forma exagerada e desproporcional, cuecas por cima das calças e roteiros rocambolescos impossíveis de serem acompanhados, bem, você está certa.</p>
-                <a class="btn btn-primary" href="../app/post/posts/post15.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
-                <hr>
-                <!-- Pager -->
-                <ul class="pager">
-                    <li class="previous"><a href="#">&larr; Older</a></li>
-                    <li class="next"><a href="#">Newer &rarr;</a></li>
-                </ul>
+                <h1 class="page-header">Revolução Feminina<h4>Liberdade, Igualdade e Fraternidade na TI</h4></h1>
+                <div ng-show="!buscou">
+                      <h2>
+                          <a href="#">A nova garagem da NASA parece algo de dentro da Estrela da Morte</a>
+                      </h2>
+                      <p class="lead">by <a href="http://gizmodo.uol.com.br/">Gizmodo</a></p>
+                      <p><span class="glyphicon glyphicon-time"></span> Postado em 20 de abril de 2016</p>
+                      <hr>
+                      <p>Esta estrutura imensa de aço parece o interior da Estrela da Morte de Star Wars Episódio VI. Mas, na verdade, é uma parte do Vehicle Assembly Building (VAB), do Kennedy Space Center na Flórida, EUA.</p>
+                      <a class="btn btn-primary" href="../app/post/posts/post01.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
+                      <hr>
+                      <h2>
+                          <a href="#">Relatório 2015 de Segurança do Android</a>
+                      </h2>
+                      <p class="lead">by <a href="http://googlebrasilblog.blogspot.com.br/">Google Brasil Blog</a></p>
+                      <p><span class="glyphicon glyphicon-time"></span> Postado em 19 de abril de 2016</p>
+                      <hr>
+                      <p>Hoje, pelo segundo ano consecutivo, estamos liberando nosso relatório anual de Segurança do Android. O estudo incluí: um olhar detalhado sobre como os serviços do Google protegem o ecossistema do Android, uma revisão dos recursos de proteção lançados em 2015 e nosso amplo trabalho com os parceiros e com a comunidade de pesquisadores de segurança.</p>
+                      <a class="btn btn-primary" href="../app/post/posts/post02.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
+                      <hr>
+                      <h2>
+                          <a href="#">Anatel suspende limites na banda larga fixa por 90 dias</a>
+                      </h2>
+                      <p class="lead">by <a href="https://tecnoblog.net/">TecnoBlog</a></p>
+                      <p><span class="glyphicon glyphicon-time"></span> Postado em 18 de abril de 2016</p>
+                      <hr>
+                      <p>Operadoras precisam cumprir determinações da Anatel antes de aplicar sanções aos consumidores</p>
+                      <a class="btn btn-primary" href="../app/post/posts/post03.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
+                      <hr>
+                      <h2>
+                          <a href="#">Encontre tempo para cumprir suas metas com o Google Agenda</a>
+                      </h2>
+                      <p class="lead">by <a href="http://googlebrasilblog.blogspot.com.br/">Google Brasil Blog</a></p>
+                      <p><span class="glyphicon glyphicon-time"></span> Postado em 14 de abril de 2016</p>
+                      <hr>
+                      <p>Ler mais livros, aprender uma nova língua ou exercitar-se regularmente. Qualquer que seja sua meta, alcançá-la pode ser uma tarefa muito difícil. Um dia é “eu fui chamado para uma reunião de última hora”, no outro “eu tenho um amigo na cidade” e, antes que você perceba, suas metas estão atrasadas ou deixadas de lado.</p>
+                      <a class="btn btn-primary" href="../app/post/posts/post04.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
+                      <hr>
+                      <h2>
+                          <a href="#">Tecnologia e gênero: distinção importa?</a>
+                      </h2>
+                      <p class="lead">by <a href="https://mulheresnacomputacao.com">Mulheres na computação</a>
+                      </p>
+                      <p><span class="glyphicon glyphicon-time"></span> Postado em 09 de Abril de 2016</p>
+                      <hr>
+                      <p>Não se pode mais negar: o empoderamento feminino, finalmente, é uma pauta que vem crescendo e sendo discutida nos mais diversos âmbitos da sociedade.</p>
+                      <a class="btn btn-primary" href="../app/post/posts/post05.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
+                      <hr>
+                      <!-- Second Blog Post -->
+                      <h2>
+                          <a href="#">Quer arrumar um emprego na área de tecnologia? Chegou sua hora!</a>
+                      </h2>
+                      <p class="lead">by <a href="https://mulheresnacomputacao.com">Mulheres na computação</a></p>
+                      <p><span class="glyphicon glyphicon-time"></span> Postado em 06 de Abril de 2016</p>
+                      <hr>
+                      <p>A Landing.jobs, plataforma europeia de empregos de TI, está lançando um desafio para selecionar 12 especialistas em TI da América Latina para participar gratuitamente do Landing.jobs Festival, em junho, em Lisboa.</p>
+                      <a class="btn btn-primary" href="../app/post/posts/post06.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
+                      <hr>
+                      <h2>
+                          <a href="#">Mulheres Maravilha – A história não contada das super-heroínas americanas</a>
+                      </h2>
+                      <p class="lead">by <a href="http://minasnerds.com.br/">Minas Nerds</a></p>
+                      <p><span class="glyphicon glyphicon-time"></span> Postado em 06 de abril de 2016</p>
+                      <hr>
+                      <p>Aqui o documentário – Wonder Women – a história não contada das super-heroínas americanas (em inglês, sorry 🙁 que traça a evolução fascinante e o legado da nossa querida Mulher Maravilha, simbolo máximo do feminismo e do poder da mulher na cultura pop em geral.</p>
+                      <a class="btn btn-primary" href="../app/post/posts/post07.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
+                      <hr>
+                      <h2>
+                          <a href="#">Pat Patriot: Mulher, operária e patriota</a>
+                      </h2>
+                      <p class="lead">by <a href="http://ladyscomics.com.br/">Ladys Comics</a></p>
+                      <p><span class="glyphicon glyphicon-time"></span> Postado em 04 de abril de 2016</p>
+                      <hr>
+                      <p>Nos “Anos de Ouro” (The Golden Age) dos comics estadunidenses, centenas de personagens de Histórias em Quadrinhos (HQs) foram criadas e lançadas em jornais e revistas. As HQs estavam em uma fase de grande popularidade. Surgiram muitos estúdios especializados na sua produção para atender à demanda do público e das próprias editoras.</p>
+                      <a class="btn btn-primary" href="../app/post/posts/post08.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
+                      <hr>
+                      <h2>
+                          <a href="#">Empoderar mulheres por meio da tecnologia?</a>
+                      </h2>
+                      <p class="lead">by <a href="http://mulheresnatecnologia.org/">Mulheres na Tecnologia</a></p>
+                      <p><span class="glyphicon glyphicon-time"></span> Postado em 30 de março de 2016</p>
+                      <hr>
+                      <p>Muito tem se falado sobre a baixa presença de mulheres na tecnologia. O tema vem ganhando espaço em ambientes acadêmicos, na mídia e dentro da própria tecnologia. Estudos apontam que as razões para este fato são construídas a partir da infância, nos primeiros contatos com a educação formal e influências culturais machistas, e são reforçadas ao longo de toda vida. Além deste, um outro problema é o fato de muitas mulheres estarem abandonando a carreira de TI. O principal motivo é a difícil convivência com o machismo que impera neste ambiente.</p>
+                      <a class="btn btn-primary" href="../app/post/posts/post09.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
+                      <hr>
+                      <h2>
+                          <a href="#">Colabore com o libre graphics!</a>
+                      </h2>
+                      <p class="lead">by <a href="http://mulheres.eti.br/">Mulheres, Tecnologia e Oportunidades</a></p>
+                      <p><span class="glyphicon glyphicon-time"></span> Postado em 30 de março de 2016</p>
+                      <hr>
+                      <p>Em abril (15 a 18)  vai acontecer o Libre Graphics que é um evento para usuários, entusiastas e desenvolvedores de Software Livre para aplicações gŕaficas. Dentre os softwares mantidos por esse grupo estão: Open Clipart Library, Blender, Inkscape e GIMP.</p>
+                      <a class="btn btn-primary" href="../app/post/posts/post10.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
+                      <hr>
+                      <h2>
+                          <a href="#">Hello, World!</a>
+                      </h2>
+                      <p class="lead">by <a href="http://projetotutoras.com/">Projeto Tutoras</a></p>
+                      <p><span class="glyphicon glyphicon-time"></span> Postado em 29 de março de 2016</p>
+                      <hr>
+                      <p>Quando aprendemos uma linguagem de programação, geralmente nosso primeiro programa é algo bem simples cuja única função é mostrar a frase “Hello, World!” na tela.</p>
+                      <a class="btn btn-primary" href="../app/post/posts/post11.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
+                      <hr>
+                      <h2>
+                          <a href="#">Estudo gigante revela gap gênero na tecnologia e mais vários outros insights!</a>
+                      </h2>
+                      <p class="lead">by <a href="https://mulheresnacomputacao.com">Mulheres na computação</a></p>
+                      <p><span class="glyphicon glyphicon-time"></span> Postado em 21 de março de 2016</p>
+                      <hr>
+                      <p>Quem aqui é do mundo de tecnologia e não conhece o Stack Overflow?! Esta é uma plataforma gigante de perguntas e respostas relacionadas a tecnologia! Eles indagaram mais de 50 mil pessoas e criaram um mapa com o perfil dos profissionais que trabalham com desenvolvimento de sistemas. E pra variar um gap de gênero gigante foi escancarado!!</p>
+                      <a class="btn btn-primary" href="../app/post/posts/post12.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
+                      <hr>
+                      <h2>
+                          <a href="#">Listagem colaborativa das iniciativas de mulheres na tecnologia pelo país <3</a>
+                      </h2>
+                      <p class="lead">by <a href="https://mulheresnacomputacao.com">Mulheres na computação</a></p>
+                      <p><span class="glyphicon glyphicon-time"></span> Postado em 12 de março de 2016</p>
+                      <hr>
+                      <p>Sempre me perguntam: Mas será que tem algo do tipo na minha cidade? Onde eu acho as comunidades? Será que eu estou sozinha?
+                        ENFIM! Querendo um mundo melhor e como comemoração da semana da mulher fiz uma chamado nas nossas redes sociais para gente juntar tudo em um lugar só!</p>
+                      <a class="btn btn-primary" href="../app/post/posts/post13.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
+                      <hr>
+                      <h2>
+                          <a href="#">Data Science: Por onde começar a estudar?[Parte 1]</a>
+                      </h2>
+                      <p class="lead">by <a href="http://inspiradanacomputacao.com/">Inspirada na Computação</a></p>
+                      <p><span class="glyphicon glyphicon-time"></span> Postado em 08 de fevereiro de 2016</p>
+                      <hr>
+                      <p>Como estudar a base para os cursos oferecidos no Coursera/edX/etc</p>
+                      <a class="btn btn-primary" href="../app/post/posts/post14.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
+                      <hr>
+                      <h2>
+                          <a href="#">As 10 heroínas mais feministas dos quadrinhos</a>
+                      </h2>
+                      <p class="lead">by <a href="http://minasnerds.com.br/">Minas Nerds</a></p>
+                      <p><span class="glyphicon glyphicon-time"></span> Postado em 05 de novembro de 2015</p>
+                      <p>Se você é menina padawan nessa coisa de ler quadrinhos e ainda acha que o gênero se resume a super-heróis, machistas e excludentes em sua grande maioria, com milhares de músculos ilustrados de forma exagerada e desproporcional, cuecas por cima das calças e roteiros rocambolescos impossíveis de serem acompanhados, bem, você está certa.</p>
+                      <a class="btn btn-primary" href="../app/post/posts/post15.html">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
+                      <hr>
+                </div>
+                <div ng-show="buscou">
+                  <div><p>Foram encontrados {{posts.hits.total}} resultados</p></div>
+                  <ul style="list-style: none;">
+                      <li ng-repeat="page in posts.hits.hits">
+                        <h2><a href="#">{{ page._source.title }}</a></h2>
+                        <p class="lead">by <a href="#">{{ page._source.author }}</a></p>
+                        <p><span class="glyphicon glyphicon-time"></span> {{ page._source.date_post }}</p>
+                        <hr>
+                        <p>{{ page._source.description }}</p>
+                        <a class="btn btn-primary" href="../post/posts/{{ page._source.url }}">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
+                        <hr>
+                      </li>
+                  </ul>
+                </div>
             </div>
-            <!-- Blog Sidebar Widgets Column -->
             <div class="col-md-4">
-                <!-- Blog Search Well -->
                 <div class="well">
                     <h4>Pesquisar no blog</h4>
                     <div class="input-group">
-                        <input type="text" class="form-control">
+                        <input type="text" class="form-control" ng-model="search_term">
                         <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
+                            <button class="btn btn-default" ng-click="search(search_term)">
                                 <span class="glyphicon glyphicon-search"></span>
                         </button>
                         </span>
                     </div>
-                    <!-- /.input-group -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p style="font-style: italic;font-size:12px">Search powered by AngularJS+Elasticsearch</p>
+                        </div>
+                    </div>
                 </div>
-                <!-- Side Widget Well -->
             </div>
         </div>
-        <!-- /.row -->
         <hr>
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Blog in AngularJS 2016</p>
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
-            <!-- /.row -->
-        </footer>
     </div>
-    <!-- /.container -->
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../app/assets/js/bootstrap.min.js"></script>
-    <script src="../app/assets/js/angular.min.js"></script>
-    <script src="../app/assets/elasticsearch.angular.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/angular.js"></script>
+    <script>
+
+    var app = angular.module("MyApp", []);
+
+    app.controller('ExampleController',['$scope','$http',function($scope, $http) {
+      $scope.buscou = false
+
+      $scope.search = function (term) {
+        $http.get('http://localhost:9200/blog/_search?q=' + term).
+            success(function(data, status, headers, config) {
+              $scope.posts = data;
+              $scope.buscou = true;
+            }).
+            error(function(data, status, headers, config) {
+            // log error
+            });
+      }
+    }]);
+  </script>
 </body>
 </html>
