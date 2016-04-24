@@ -7,10 +7,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Blog Home</title>
-    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../assets/css/blog-home.css" rel="stylesheet">
+    <link href="../app/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../app/assets/css/blog-home.css" rel="stylesheet">
 </head>
-<body ng-app="MyApp">
+<body ng-app="myApp">
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -182,7 +182,7 @@
                         <p><span class="glyphicon glyphicon-time"></span> {{ page._source.date_post }}</p>
                         <hr>
                         <p>{{ page._source.description }}</p>
-                        <a class="btn btn-primary" href="../post/posts/{{ page._source.url }}">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
+                        <a class="btn btn-primary" href="../app/post/posts/{{ page._source.url }}">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
                         <hr>
                       </li>
                   </ul>
@@ -210,26 +210,9 @@
         <hr>
     </div>
     <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
-    <script src="../assets/js/bootstrap.min.js"></script>
-    <script src="../assets/js/angular.js"></script>
-    <script>
-
-    var app = angular.module("MyApp", []);
-
-    app.controller('ExampleController',['$scope','$http',function($scope, $http) {
-      $scope.buscou = false
-
-      $scope.search = function (term) {
-        $http.get('http://localhost:9200/blog/_search?q=' + term).
-            success(function(data, status, headers, config) {
-              $scope.posts = data;
-              $scope.buscou = true;
-            }).
-            error(function(data, status, headers, config) {
-            // log error
-            });
-      }
-    }]);
-  </script>
+    <script src="../app/assets/js/bootstrap.min.js"></script>
+    <script src="../app/assets/js/angular.js"></script>
+    <script src="../app/assets/js/app.js"></script>
+    <script src="../app/assets/js/controller.js"></script>
 </body>
 </html>
