@@ -175,17 +175,19 @@
                 </div>
                 <div ng-show="buscou">
                   <div><p>Foram encontrados {{posts.hits.total}} resultados</p></div>
-                  <ul style="list-style: none;">
-                      <li ng-repeat="page in posts.hits.hits">
-                        <h2><a href="#">{{ page._source.title }}</a></h2>
-                        <p class="lead">by <a href="#">{{ page._source.author }}</a></p>
-                        <p><span class="glyphicon glyphicon-time"></span> {{ page._source.date_post }}</p>
-                        <hr>
-                        <p>{{ page._source.description }}</p>
-                        <a class="btn btn-primary" href="../app/post/posts/{{ page._source.url }}">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
-                        <hr>
-                      </li>
-                  </ul>
+                  <div id="results">
+                    <ul style="list-style: none;">
+                        <li ng-repeat="page in posts.hits.hits">
+                          <h2><a href="#">{{ page._source.title }}</a></h2>
+                          <p class="lead">by <a href="#">{{ page._source.author }}</a></p>
+                          <p><span class="glyphicon glyphicon-time"></span> {{ page._source.date_post }}</p>
+                          <hr>
+                          <p>{{ page._source.description }}</p>
+                          <a class="btn btn-primary" href="../app/post/posts/{{ page._source.url }}">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
+                          <hr>
+                        </li>
+                    </ul>
+                  </div>
                 </div>
             </div>
             <div class="col-md-4">
