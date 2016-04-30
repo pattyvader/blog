@@ -1,35 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>A nova garagem da NASA parece algo de dentro da Estrela da Morte</title>
-
-    <!-- Bootstrap Core CSS -->
     <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
     <link href="../../assets/css/blog-post.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
 </head>
-<body>
-    <!-- Navigation -->
+<body ng-app="myApp">
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -39,71 +22,79 @@
                 </button>
                 <a class="navbar-brand" href="#">Blog</a>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="../../index.html">Home</a></li>
                     <li><a href="#">Sobre</a></li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
     </nav>
-
-    <!-- Page Content -->
-    <div class="container">
+    <div class="container" ng-controller="ExampleController">
         <div class="row">
-            <!-- Blog Post Content Column -->
             <div class="col-lg-8">
-                <!-- Blog Post -->
-                <!-- Title -->
-                <h1>A nova garagem da NASA parece algo de dentro da Estrela da Morte</h1>
-                <!-- Author -->
-                <p class="lead">by <a href="http://gizmodo.uol.com.br/">Gizmodo</a></p>
-                <hr>
-                <!-- Date/Time -->
-                <p><span class="glyphicon glyphicon-time"></span> Postado em 20 de abril de 2016</p>
-                <hr>
-                <!-- Post Content -->
-                <p>Esta estrutura imensa de aço parece o interior da Estrela da Morte de Star Wars Episódio VI. Mas, na verdade, é uma parte do Vehicle Assembly Building (VAB), do Kennedy Space Center na Flórida, EUA.?</p>
-                <p>A foto mostra três novas plataformas de trabalho que foram instaladas para a NASA dar andamento ao projeto do foguete Space Launch System (SLS). A NASA explica:</p>
-                <blockquote>
-                  <p>As plataformas inferiores são as plataformas de trabalho nível K. Acima delas, estão as plataformas de trabalho nível J […] a cerca de 34 metros acima do chão, ou quase 11 andares de altura. A plataforma recém-instalada vai completar o segundo dos 10 níveis de plataformas de trabalho que vão rodear e dar acesso ao foguete SLS e à espaçonave Orion para a Exploration Mission 1. O Ground Systems Development and Operations Program está supervisionando atualizações e modificações ao VAB, incluindo a instalação de novas plataformas de trabalho, para preparar a jornada da NASA para Marte.</p>
-                </blockquote>
-                <hr>
-            </div>
-            <!-- Blog Sidebar Widgets Column -->
-            <div class="col-md-4">
-                <!-- Blog Search Well -->
-                <div class="well">
-                    <h4>Pesquisar no blog</h4>
-                    <div class="input-group">
-                        <input type="text" class="form-control">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                                <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                        </span>
-                    </div>
-                    <!-- /.input-group -->
+              <div ng-show="!buscou">
+                    <h1>A nova garagem da NASA parece algo de dentro da Estrela da Morte</h1>
+                    <p class="lead">by <a href="http://gizmodo.uol.com.br/">Gizmodo</a></p>
+                    <hr>
+                    <p><span class="glyphicon glyphicon-time"></span> Postado em 20 de abril de 2016</p>
+                    <hr>
+                    <p>Esta estrutura imensa de aço parece o interior da Estrela da Morte de Star Wars Episódio VI. Mas, na verdade, é uma parte do Vehicle Assembly Building (VAB), do Kennedy Space Center na Flórida, EUA.?</p>
+                    <p>A foto mostra três novas plataformas de trabalho que foram instaladas para a NASA dar andamento ao projeto do foguete Space Launch System (SLS). A NASA explica:</p>
+                    <blockquote>
+                      <p>As plataformas inferiores são as plataformas de trabalho nível K. Acima delas, estão as plataformas de trabalho nível J […] a cerca de 34 metros acima do chão, ou quase 11 andares de altura. A plataforma recém-instalada vai completar o segundo dos 10 níveis de plataformas de trabalho que vão rodear e dar acesso ao foguete SLS e à espaçonave Orion para a Exploration Mission 1. O Ground Systems Development and Operations Program está supervisionando atualizações e modificações ao VAB, incluindo a instalação de novas plataformas de trabalho, para preparar a jornada da NASA para Marte.</p>
+                    </blockquote>
+                    <hr>
+              </div>
+              <div ng-show="buscou">
+                <h1 class="page-header">Revolução Feminina<h4>Liberdade, Igualdade e Fraternidade na TI</h4></h1>
+                <div><p>Foram encontrados {{posts.hits.total}} resultados</p></div>
+                <div id="results">
+                  <ul style="list-style: none;">
+                      <li ng-repeat="page in posts.hits.hits">
+                        <h2><a href="#">{{ page._source.title }}</a></h2>
+                        <p class="lead">by <a href="#">{{ page._source.author }}</a></p>
+                        <p><span class="glyphicon glyphicon-time"></span> {{ page._source.date_post }}</p>
+                        <hr>
+                        <p>{{ page._source.description }}</p>
+                        <a class="btn btn-primary" href="../app/post/posts/{{ page._source.url }}">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
+                        <hr>
+                      </li>
+                  </ul>
                 </div>
             </div>
         </div>
-        <!-- /.row -->
+        <div class="col-md-4">
+          <div class="well">
+              <h4>Pesquisar no blog</h4>
+              <div class="input-group">
+                  <input type="text" class="form-control" ng-model="search_term">
+                  <span class="input-group-btn">
+                      <button class="btn btn-default" ng-click="search(search_term)">
+                          <span class="glyphicon glyphicon-search"></span>
+                  </button>
+                  </span>
+              </div>
+              <div class="row">
+                  <div class="col-lg-12">
+                      <p style="font-style: italic;font-size:12px">Search powered by AngularJS+Elasticsearch</p>
+                  </div>
+              </div>
+          </div>
+        </div>
         <hr>
-        <!-- Footer -->
         <footer>
             <div class="row">
                 <div class="col-lg-12">
                     <p>Blog in AngularJS 2016</p>
                 </div>
             </div>
-            <!-- /.row -->
         </footer>
     </div>
-    <!-- /.container -->
-    <!-- Bootstrap Core JavaScript -->
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
     <script src="../../assets/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/angular.js"></script>
+    <script src="../../assets/js/app.js"></script>
+    <script src="../../assets/js/controller.js"></script>
 </body>
 </html>

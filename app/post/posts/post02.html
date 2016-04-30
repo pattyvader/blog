@@ -1,35 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <title>Relatório 2015 de Segurança do Android</title>
-
-    <!-- Bootstrap Core CSS -->
     <link href="../../assets/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
     <link href="../../assets/css/blog-post.css" rel="stylesheet">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
 </head>
-<body>
-    <!-- Navigation -->
+<body ng-app="myApp">
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -39,101 +22,109 @@
                 </button>
                 <a class="navbar-brand" href="#">Blog</a>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="../../index.html">Home</a></li>
                     <li><a href="#">Sobre</a></li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
     </nav>
-
-    <!-- Page Content -->
-    <div class="container">
+    <div class="container" ng-controller="ExampleController">
         <div class="row">
-            <!-- Blog Post Content Column -->
             <div class="col-lg-8">
-                <!-- Blog Post -->
-                <!-- Title -->
-                <h1>Relatório 2015 de Segurança do Android</h1>
-                <!-- Author -->
-                <p class="lead">by <a href="http://googlebrasilblog.blogspot.com.br/">Google Brasil Blog</a></p>
-                <hr>
-                <!-- Date/Time -->
-                <p><span class="glyphicon glyphicon-time"></span> Postado em 19 de abril de 2016</p>
-                <hr>
-                <!-- Post Content -->
-                <p>Hoje, pelo segundo ano consecutivo, estamos liberando nosso relatório anual de Segurança do Android. O estudo incluí: um olhar detalhado sobre como os serviços do Google protegem o ecossistema do Android, uma revisão dos recursos de proteção lançados em 2015 e nosso amplo trabalho com os parceiros e com a comunidade de pesquisadores de segurança. O relatório completo está aqui, mas você pode encontrar uma visão geral abaixo.</p>
-                <p>Nossa meta com este relatório é estimular um debate fundamentado sobre segurança no Android. Esperamos cumprir este objetivo fornecendo informações sobre o que estamos fazendo e o que estamos vendo acontecer no ecossistema. Acreditamos firmemente que uma discussão informada e baseada em dados ajudará a guiar nossos esforços para tornar o ecossistema Android cada vez mais seguro. </p>
-                <b>
-                  <p>Melhorando os serviços do Google para proteger os usuários de Android</p>
-                </b>
-                <p>Ano passado, melhoramos significativamente nosso machine learning (“aprendizagem de máquina”) e análises para detectar comportamentos potencialmente perigosos.</p>
-                <ul>
-                    <li>Protegemos nossos usuários de Aplicativos Potencialmente Perigosos (PHAs, na sigla em inglês) e outros tipos de ameaças checando mais de 6 bilhões de aplicativos por dia.</li>
-                    <li>Resguardamos os usuários de possíveis ataques realizados a partir de redes e de ameaças instaladas nos dispositivos, verificando 400 milhões de aparelhos por dia. </li>
-                    <li>E protegemos centenas de milhões de usuários do navegador Chrome no Android contra sites maliciosos por meio do <a href="https://security.googleblog.com/2015/12/protecting-hundreds-of-millions-more.html" target="_blank">Safe Browsing</a></li>
-                </ul>
-                <p>Continuamos trabalhando para tornar ainda mais difícil para um usuário instalar PHAs a partir do Google Play. As melhorias implementadas no ano passado reduziram a probabilidade de instalar um PHA do Google Play em 40% na comparação com 2014. As instalações de PHAs caíram na maior parte das categorias:</p>
-                <ul>
-                  <li>Data Collection – redução de mais de 40% para 0,08% de instalações;</li>
-                  <li>Spyware – redução de 60% para 0,02% de instalações;</li>
-                  <li>Hostile Downloader – redução de 50% para 0,01% de instalações.</li>
-                </ul>
-                <p>No geral, PHAs foram instalados em menos de 0,15% dos dispositivos que usaram apenas o Google Play. Cerca de 0,5% dos aparelhos que usaram Google Play e outras fontes tiveram um PHA instalado em 2015, resultado similiar aos números do relatório do ano passado.</p>
-                <p>É fundamental que também protejamos os usuários que instalam apps de fora do Google Play. Nosso recurso de <a href="https://support.google.com/accounts/answer/2812853?hl=pt-BR" target="_blank">Verificação de aplicativos</a> protege esses usuários e fizemos melhoras que aumentaram a efetividade dos alertas de segurança em 50%.</p>
-                <b>
-                  <p>Novos recursos de segurança na plataforma Android</p>
-                </b>
-                <p>No ano passado, nós lançamos o <a href="http://officialandroid.blogspot.com.br/2015/10/get-ready-for-sweet-taste-of-android-60.html" target="_blank">Android 6.0 Marshmallow</a> e introduzimos uma variedade de novas proteções de segurança e controles:</p>
-                <ul>
-                  <li>A criptografia completa de disco é agora um requisito para a maioria dos dispositivos com Marshmallow e também é possível estender a criptografia aos dados dos cartões SD;</li>
-                  <li>As novas permissões de aplicativo permitem gerenciar com mais precisão quais dados são compartilhados com determinados aplicativos;</li>
-                  <li>A verificação durante o boot garante que o telefone esteja seguro da tela de inicialização até o carregamento completo do sistema operacional;</li>
-                  <li>O <a href="https://support.google.com/nexus/answer/4457705" target="_blank">patch de segurança Android</a> permite que o aparelho tenha as atualizações de segurança mais recentes.</li>
-                  <li>E muito mais, incluindo suporte para leitores de impressões digitais e aperfeiçoamentos no SElinux.</li>
-                </ul>
-                <b><p>Ecossistemas de programas</p></b>
-                <p>Também temos trabalhado para estimular pesquisas em segurança no Android e fazendo investimentos para fortalecer o ecossistema agora e no futuro.</p>
-                <p>Em junho passado, o Android se juntou ao Programa de Recompensa para Vulnerabilidades, que remunera pesquisadores de segurança que acham e reportam falhas para nós. Arrumamos mais de 100 vulnerabilidades que foram reportadas e pagamos mais de 200 mil dólares para os pesquisadores por suas descobertas.</p>
-                <p>Em agosto, lançamos nosso programa público mensal de atualizações de segurança para o Android Open Source Project, bem como um ciclo regular de atualizações para dispositivos Nexus. Queremos que a atualização regular dos Nexus funcione como um modelo para todos os fabricantes de dispositivos Android e temos conversado com os parceiros para facilitar a implementação de programas similares. Desde então, os fabricantes têm fornecido atualizações de segurança mensais para centenas de modelos e centenas de milhões de usuários instalaram os updates em seus aparelhos. Apesar do progresso, muitos aparelhos ainda não estão recebendo as atualizações mensais e, por isso, aumentamos nossos esforços para ajudar os parceiros que ainda não implementaram seus programas.</p>
-                <i>Postado por Adrian Ludwig, engenheiro-líder do time de segurança do Android</i>
-                <hr>
+                <div ng-show="!buscou">
+                    <h1>Relatório 2015 de Segurança do Android</h1>
+                    <p class="lead">by <a href="http://googlebrasilblog.blogspot.com.br/">Google Brasil Blog</a></p>
+                    <hr>
+                    <p><span class="glyphicon glyphicon-time"></span> Postado em 19 de abril de 2016</p>
+                    <hr>
+                    <p>Hoje, pelo segundo ano consecutivo, estamos liberando nosso relatório anual de Segurança do Android. O estudo incluí: um olhar detalhado sobre como os serviços do Google protegem o ecossistema do Android, uma revisão dos recursos de proteção lançados em 2015 e nosso amplo trabalho com os parceiros e com a comunidade de pesquisadores de segurança. O relatório completo está aqui, mas você pode encontrar uma visão geral abaixo.</p>
+                    <p>Nossa meta com este relatório é estimular um debate fundamentado sobre segurança no Android. Esperamos cumprir este objetivo fornecendo informações sobre o que estamos fazendo e o que estamos vendo acontecer no ecossistema. Acreditamos firmemente que uma discussão informada e baseada em dados ajudará a guiar nossos esforços para tornar o ecossistema Android cada vez mais seguro. </p>
+                    <b>
+                      <p>Melhorando os serviços do Google para proteger os usuários de Android</p>
+                    </b>
+                    <p>Ano passado, melhoramos significativamente nosso machine learning (“aprendizagem de máquina”) e análises para detectar comportamentos potencialmente perigosos.</p>
+                    <ul>
+                        <li>Protegemos nossos usuários de Aplicativos Potencialmente Perigosos (PHAs, na sigla em inglês) e outros tipos de ameaças checando mais de 6 bilhões de aplicativos por dia.</li>
+                        <li>Resguardamos os usuários de possíveis ataques realizados a partir de redes e de ameaças instaladas nos dispositivos, verificando 400 milhões de aparelhos por dia. </li>
+                        <li>E protegemos centenas de milhões de usuários do navegador Chrome no Android contra sites maliciosos por meio do <a href="https://security.googleblog.com/2015/12/protecting-hundreds-of-millions-more.html" target="_blank">Safe Browsing</a></li>
+                    </ul>
+                    <p>Continuamos trabalhando para tornar ainda mais difícil para um usuário instalar PHAs a partir do Google Play. As melhorias implementadas no ano passado reduziram a probabilidade de instalar um PHA do Google Play em 40% na comparação com 2014. As instalações de PHAs caíram na maior parte das categorias:</p>
+                    <ul>
+                      <li>Data Collection – redução de mais de 40% para 0,08% de instalações;</li>
+                      <li>Spyware – redução de 60% para 0,02% de instalações;</li>
+                      <li>Hostile Downloader – redução de 50% para 0,01% de instalações.</li>
+                    </ul>
+                    <p>No geral, PHAs foram instalados em menos de 0,15% dos dispositivos que usaram apenas o Google Play. Cerca de 0,5% dos aparelhos que usaram Google Play e outras fontes tiveram um PHA instalado em 2015, resultado similiar aos números do relatório do ano passado.</p>
+                    <p>É fundamental que também protejamos os usuários que instalam apps de fora do Google Play. Nosso recurso de <a href="https://support.google.com/accounts/answer/2812853?hl=pt-BR" target="_blank">Verificação de aplicativos</a> protege esses usuários e fizemos melhoras que aumentaram a efetividade dos alertas de segurança em 50%.</p>
+                    <b>
+                      <p>Novos recursos de segurança na plataforma Android</p>
+                    </b>
+                    <p>No ano passado, nós lançamos o <a href="http://officialandroid.blogspot.com.br/2015/10/get-ready-for-sweet-taste-of-android-60.html" target="_blank">Android 6.0 Marshmallow</a> e introduzimos uma variedade de novas proteções de segurança e controles:</p>
+                    <ul>
+                      <li>A criptografia completa de disco é agora um requisito para a maioria dos dispositivos com Marshmallow e também é possível estender a criptografia aos dados dos cartões SD;</li>
+                      <li>As novas permissões de aplicativo permitem gerenciar com mais precisão quais dados são compartilhados com determinados aplicativos;</li>
+                      <li>A verificação durante o boot garante que o telefone esteja seguro da tela de inicialização até o carregamento completo do sistema operacional;</li>
+                      <li>O <a href="https://support.google.com/nexus/answer/4457705" target="_blank">patch de segurança Android</a> permite que o aparelho tenha as atualizações de segurança mais recentes.</li>
+                      <li>E muito mais, incluindo suporte para leitores de impressões digitais e aperfeiçoamentos no SElinux.</li>
+                    </ul>
+                    <b><p>Ecossistemas de programas</p></b>
+                    <p>Também temos trabalhado para estimular pesquisas em segurança no Android e fazendo investimentos para fortalecer o ecossistema agora e no futuro.</p>
+                    <p>Em junho passado, o Android se juntou ao Programa de Recompensa para Vulnerabilidades, que remunera pesquisadores de segurança que acham e reportam falhas para nós. Arrumamos mais de 100 vulnerabilidades que foram reportadas e pagamos mais de 200 mil dólares para os pesquisadores por suas descobertas.</p>
+                    <p>Em agosto, lançamos nosso programa público mensal de atualizações de segurança para o Android Open Source Project, bem como um ciclo regular de atualizações para dispositivos Nexus. Queremos que a atualização regular dos Nexus funcione como um modelo para todos os fabricantes de dispositivos Android e temos conversado com os parceiros para facilitar a implementação de programas similares. Desde então, os fabricantes têm fornecido atualizações de segurança mensais para centenas de modelos e centenas de milhões de usuários instalaram os updates em seus aparelhos. Apesar do progresso, muitos aparelhos ainda não estão recebendo as atualizações mensais e, por isso, aumentamos nossos esforços para ajudar os parceiros que ainda não implementaram seus programas.</p>
+                    <i>Postado por Adrian Ludwig, engenheiro-líder do time de segurança do Android</i>
+                    <hr>
             </div>
-            <!-- Blog Sidebar Widgets Column -->
-            <div class="col-md-4">
-                <!-- Blog Search Well -->
-                <div class="well">
-                    <h4>Pesquisar no blog</h4>
-                    <div class="input-group">
-                        <input type="text" class="form-control">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                                <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                        </span>
-                    </div>
-                    <!-- /.input-group -->
-                </div>
-            </div>
+            <div ng-show="buscou">
+              <h1 class="page-header">Revolução Feminina<h4>Liberdade, Igualdade e Fraternidade na TI</h4></h1>
+              <div><p>Foram encontrados {{posts.hits.total}} resultados</p></div>
+              <div id="results">
+                <ul style="list-style: none;">
+                    <li ng-repeat="page in posts.hits.hits">
+                      <h2><a href="#">{{ page._source.title }}</a></h2>
+                      <p class="lead">by <a href="#">{{ page._source.author }}</a></p>
+                      <p><span class="glyphicon glyphicon-time"></span> {{ page._source.date_post }}</p>
+                      <hr>
+                      <p>{{ page._source.description }}</p>
+                      <a class="btn btn-primary" href="../app/post/posts/{{ page._source.url }}">Leia mais <span class="glyphicon glyphicon-chevron-right"></span></a>
+                      <hr>
+                    </li>
+                </ul>
+              </div>
+          </div>
         </div>
-        <!-- /.row -->
+        <div class="col-md-4">
+          <div class="well">
+              <h4>Pesquisar no blog</h4>
+              <div class="input-group">
+                  <input type="text" class="form-control" ng-model="search_term">
+                  <span class="input-group-btn">
+                      <button class="btn btn-default" ng-click="search(search_term)">
+                          <span class="glyphicon glyphicon-search"></span>
+                  </button>
+                  </span>
+              </div>
+              <div class="row">
+                  <div class="col-lg-12">
+                      <p style="font-style: italic;font-size:12px">Search powered by AngularJS+Elasticsearch</p>
+                  </div>
+              </div>
+          </div>
+        </div>
         <hr>
-        <!-- Footer -->
         <footer>
             <div class="row">
                 <div class="col-lg-12">
                     <p>Blog in AngularJS 2016</p>
                 </div>
             </div>
-            <!-- /.row -->
         </footer>
     </div>
-    <!-- /.container -->
-    <!-- Bootstrap Core JavaScript -->
+    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
     <script src="../../assets/js/bootstrap.min.js"></script>
+    <script src="../../assets/js/angular.js"></script>
+    <script src="../../assets/js/app.js"></script>
+    <script src="../../assets/js/controller.js"></script>
 </body>
 </html>
